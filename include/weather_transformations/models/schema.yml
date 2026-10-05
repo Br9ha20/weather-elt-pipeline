@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: Cleaned hourly weather observations loaded from Snowflake.
+    columns:
+      - name: timestamp
+        description: Observation timestamp from Open-Meteo.
+        tests:
+          - not_null
+      - name: temp_celsius
+        description: Temperature in degrees Celsius.
+      - name: temp_fahrenheit
+        description: Temperature converted to degrees Fahrenheit.
+      - name: humidity
+        description: Relative humidity percentage.
+      - name: humidity_category
+        description: Categorical humidity level.
